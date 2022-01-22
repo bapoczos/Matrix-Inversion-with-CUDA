@@ -157,6 +157,6 @@ int main(){
 
 	printf("Successful!The inverse of the non-singular matrix can be saw in inverse.txt\n");
 
-	system("pause");
+	//system("pause");
 	return 0;
 }

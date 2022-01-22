@@ -28,7 +28,7 @@ void matrix_read(double *L, int dimension){
 
 	for (row = 0; row < dimension; row++){
 		for (col = 0; col < dimension; col++)
-		if (fscanf(fp, "%f,", &L[row * dimension + col]) == EOF) break;//read data
+		if (fscanf(fp, "%lf,", &L[row * dimension + col]) == EOF) break;//read data
 
 		if (feof(fp)) break;//if the file is over
 	}

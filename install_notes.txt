@@ -1,0 +1,19 @@
+I hade to creat symlinks to be able to compile with nvcc "ln -s path/to/src path/to/dst"
+
+
+Otherwise, cublas_v2.h and cublas_api.h were not found:
+
+    ln -s /usr/local/cuda-10.2/targets/x86_64-linux/include/cublas_v2.h /usr/include/cublas_v2.h
+
+then do the same for cublas_api.h.
+
+    ln -s /usr/local/cuda-10.2/targets/x86_64-linux/include/cublas_api.h /usr/include/cublas_api.h
+
+
+Compile: 
+nvcc matrixInversion_gpu.cu -o matrixInversion_gpu
+
+run:
+./matrixInversion_gpu
+
+
